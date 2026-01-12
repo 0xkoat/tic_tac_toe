@@ -1,0 +1,47 @@
+body{
+    margin : 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.game-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap : 30px
+}
+
+.game-info{
+    text-align: center;
+}
+
+
+.players{
+    display: flex;
+    gap : 50px;
+    margin-top : 20px
+}
+
+.player{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap : 10px;
+}
+
+.playing-grid{
+    display : grid;
+    grid-template-columns: 150px 150px 150px;
+    grid-template-rows: 150px 150px 150px;
+    padding:  10px;
+    
+}
+
+#num1, #num2, #num4, #num5, #num7, #num8 {
+    border-right: 3px solid black;
+}
+#num1, #num2, #num3, #num4, #num5, #num6 {
+    border-bottom: 3px solid black;
+}
