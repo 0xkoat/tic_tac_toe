@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="play.js" defer></script>
+    <script src="ui.js" defer></script>
+    <script src="app.js" defer></script>
+</head>
+<body>
+    
+<div id="scoreboard-container" class="board hidden">
+    
+    <h3 class="title">SCOREBOARD</h3>
+
+    <div class="score-display">
+    
+        <div class="player-score-box">
+            <div class="player-name" id="name1">player1</div>
+            <div class="score-number" id="score1">0</div>
+        </div>
+
+        <div class="colon-separator">:</div>
+
+        <div class="player-score-box">
+            <div class="player-name" id="name2">player2</div>
+            <div class="score-number" id="score2">0</div>
+        </div>
+ 
+    </div>
+
+    <button class="play-again">Next Round</button>
+</div>
+
+<div id="first-player-container"></div>
+<div id="congrats-container"></div>
+
+<div class="game-container">
+    
+    <div class="game-info">
+        
+        <h1>Let's Have Some Fun</h1>
+        
+        <div class="players">
+            
+            <div class="player">
+                <div class="name">Player 1</div>
+                <label>Name*:</label>
+                <input type="text" id="player1" required>              
+            </div>
+            
+            <div class="player">
+                <div class="name">Player 2</div>
+                <label>Name*:</label>
+                <input type="text" id="player2" required>
+            </div>
+
+        </div>
+
+        <button type="submit" class="submit">Submit</button>
+
+    </div>
+    
+    
+    <div class="playing-grid hidden">
+        <div id="num1"></div>
+        <div id="num2"></div>
+        <div id="num3"></div>
+        <div id="num4"></div>
+        <div id="num5"></div>
+        <div id="num6"></div>
+        <div id="num7"></div>
+        <div id="num8"></div>
+        <div id="num9"></div>
+    </div>
+
+   
+</div>
+
+</body>
+</html>
