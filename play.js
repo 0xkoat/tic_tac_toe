@@ -1,20 +1,3 @@
-function Player(name, sign, score) {
-    this.name = name;
-    this.sign = sign;
-    this.score = score;
-}
-
-const player1 = new Player('', 'X', 0);
-const player2 = new Player('', 'O', 0);
-
-let game = {
-    gameboard: ['', '', '', '', '', '', '', '', ''],
-    gameStarted: false,
-    winner: '',
-    cells_won: [],
-    turn: player1,
-    
-};
 
 const winPatterns = [[0, 1, 2], [3, 4, 5], [6, 7, 8], [0, 3, 6], [1, 4, 7], [2, 5, 8], [0, 4, 8], [2, 4, 6]];
 
@@ -22,7 +5,7 @@ function init() {
     return {
     gameboard: ['', '', '', '', '', '', '', '', ''],
     winner: '',
-    cells_won: [],
+    win_pattern: [],
     turn: player1,
     }
 }
@@ -35,7 +18,7 @@ function play(num, game) {
         const [a, b, c] = pattern;
         if (game.gameboard[a] && game.gameboard[a] === game.gameboard[b] && game.gameboard[a] === game.gameboard[c]) {
             game.winner = game.turn;
-            game.cells_won = pattern;
+            game.win_pattern = pattern;
             game.turn.score++;
             return;
         }
@@ -52,8 +35,9 @@ function play(num, game) {
     else {
         game.turn = player1;
     }
+}
 
-    return 
-
+function isFinished(game) {
+    return game.winner !== '';
 }
 
