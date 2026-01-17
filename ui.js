@@ -34,7 +34,9 @@ function handleEndOfGame(game){
 
 function updateScoreboard(player1, player2) {
   document.getElementById('score1').textContent = player1.score;
-  document.getElementById('score2').textContent = player2.score;
+    document.getElementById('score2').textContent = player2.score;
+    document.getElementById('next-round').classList.remove('hidden');
+
 }
 
 
@@ -62,6 +64,7 @@ function resetUI() {
     document.getElementById('name1').classList.remove('active-turn');
     document.getElementById('name2').classList.remove('active-turn');
     document.getElementById('congrats-container').innerHTML = '';
+    document.getElementById('next-round').classList.add('hidden');
     
 }
 
