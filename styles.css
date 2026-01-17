@@ -104,7 +104,7 @@ body {
     margin-bottom: 8px;
 }
 
-.board {
+.scoreboard {
     background: linear-gradient(135deg, #87CEEB 0%, #4682B4 100%);
     padding: 12px 25px;
     border-radius: 10px;
@@ -121,11 +121,11 @@ body {
     margin-top: 5px;
 }
 
-.board.hidden {
+.scoreboard.hidden {
     display: none !important;
 }
 
-.board .title {
+.scoreboard .title {
     font-size: 22px;
     margin-bottom: 12px;
     color: white;
@@ -207,7 +207,7 @@ body {
     line-height: 1;
 }
 
-.board .play-again {
+.scoreboard .play-again {
     margin-top: 8px;
     padding: 10px 35px;
     background: linear-gradient(135deg, #32CD32 0%, #228B22 100%);
@@ -225,7 +225,7 @@ body {
     width: auto;
 }
 
-.board .play-again:hover {
+.scoreboard .play-again:hover {
     transform: translateY(-2px);
     box-shadow: 0 6px 15px rgba(0, 100, 0, 0.4);
     background: linear-gradient(135deg, #3CB371 0%, #2E8B57 100%);
