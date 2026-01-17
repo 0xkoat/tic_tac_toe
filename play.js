@@ -20,6 +20,7 @@ function play(num, game) {
             game.winner = game.turn;
             game.win_pattern = pattern;
             game.turn.score++;
+            
             return;
         }
     }

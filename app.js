@@ -7,13 +7,6 @@ function Player(name, sign, score) {
 const player1 = new Player('', 'X', 0);
 const player2 = new Player('', 'O', 0);
 
-let game = {
-  gameboard: ['', '', '', '', '', '', '', '', ''],
-  winner: '',
-  win_pattern: [],
-  turn: player1
-};
-
 const playersInfo = document.querySelector('.game-info');
 const playingGrid = document.querySelector('.playing-grid');
 const scoreboard = document.querySelector('.scoreboard');
@@ -27,11 +20,10 @@ function onCellClick(cell) {
   const index = parseInt(cell.id.replace('num', '')) - 1;
   if (isFinished(game) || game.gameboard[index] !== '') return;
 
-  play(index, game);
-  updateUI(game);
-    
-   if (isFinished(game)) {
-        updateScoreboard(player1, player2);
+    play(index, game); 
+    updateBoardUIAndTurn(game);
+    if (isFinished(game)) {
+        handleEndOfGame(game);
     }
 }
 
@@ -73,10 +65,9 @@ function setAppEventListeners() {
 
 function startNewRound() {
   game = init();
-  game.turn = Math.random() < 0.5 ? player1 : player2;
-  displayStarter(game.turn);
-  resetCellsColors(cells);
-  updateUI(game);
+  displayStarter(game.turn = Math.random() < 0.5 ? player1 : player2);
+  resetUI();
+updateBoardUIAndTurn(game);
   setCellClickEvents();
 }
 
